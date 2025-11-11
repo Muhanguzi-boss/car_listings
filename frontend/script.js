@@ -1,3 +1,9 @@
+// Redirect to login if not authenticated
+const token = localStorage.getItem("token");
+if (!token) {
+  window.location.href = "login.html";
+}
+
 const grid = document.getElementById("grid");
 const template = document.getElementById("card-template");
 
